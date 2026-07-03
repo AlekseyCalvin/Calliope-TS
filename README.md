@@ -1,4 +1,4 @@
-# Calliope TS 0.0.4
+# Calliope TS 0.0.5
 
 **Calliope TS** is a phonological poetry-scansion toolkit for TypeScript / Node.js. Hand it a poem (or a single line), and it will tell you — and *show* you — how that verse actually moves: which syllables carry weight and how much, where the beats fall, what meter each line is in and how confidently, what rhymes with what, and what form the stanzas add up to.
 
