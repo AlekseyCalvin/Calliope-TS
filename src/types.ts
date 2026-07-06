@@ -34,7 +34,7 @@ export interface ClsWord {
                                       //   (set by the parser's de-capitalisation) — what reports
                                       //   and the phonopoetics show to the reader
   absoluteIndex: number;              // 0‑based index among all words in the text
-  isContent: boolean; 
+  isContent: boolean;
   // extended properties
   syllables: Syllable[];              // array of syllables for the word
   morphSuffix?: string;               // productive suffix split off for OOV stress (e.g. 'est'); guides display syllabification

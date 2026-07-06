@@ -71,7 +71,7 @@ calliope-ts "Shall I compare thee to a summer's day?"
 calliope-ts poem.txt
 
 # 3. Reading view — the poem itself, syllables tinted by stress
-#    (the nicest way to read a whole poem; first option in the CLI; 
+#    (the nicest way to read a whole poem; first option in the CLI;
 or add -r or --reading)
 
 # 4. Pipe text in
@@ -86,7 +86,7 @@ calliope-ts --clio poem.txt
 
 The interactive menu offers: multi-line paste-and-scan (reading view),
 single-line detailed analysis, line-by-line analysis, file input in either
-view, a **legend** explaining every symbol and colour, and an option to 
+view, a **legend** explaining every symbol and colour, and an option to
 "Ask Clio instead" for the alternative parse.
 
 There are two display modes:
@@ -114,7 +114,7 @@ core representation everything else is built on):
 | `s` | strong | primary stresses, phrase peaks, line-final nuclei |
 
 A line's **stress map** is simply its syllables in order, e.g.
-`xs|wxm|wxs|xws` — with: 
+`xs|wxm|wxs|xws` — with:
 `|` marking foot boundaries;
 `‖` a strong caesura (aka syntactic pause) at major phonological/clausal or punctuation breaks;
 `¦` a lighter phrase break;
@@ -122,7 +122,7 @@ A line's **stress map** is simply its syllables in order, e.g.
 
 ### Meter lines
 
-In the reading view each verse-line gets a single summary line. 
+In the reading view each verse-line gets a single summary line.
 Reading one such line left to right:
 
 ```
@@ -166,17 +166,17 @@ Two simple principles carry a lot of the work here, both articulated in Bruce Ha
 2. **Bigger units matter more.**
 So, a stress at the end of a whole intonational unit is stronger evidence than one at the end of a phonological phrase, which is stronger evidence than the distribution of a given clitic phrase, which is more significant than the pattern of an individual word (however longer polysyllabic words may likewise hold more "weight" here). And in English as a whole, the pattern generally leans to the right (with certain significant exceptions, like numerous classes of compound expressions). But this bias as such aligns with the infamous iambic inclination.
 
-Bruce Hayes himself (2005) and Gareth McAleese (2007/2008) built the first faithful algorithmic/computational implementations of a verse scansion procedure around those two ideas. Calliope TS re-implements that architecture on a modern JavaScript/TypeScript stack, while attempting to push it into distinctive directions. Among these: deliberately looser pre-attunement to standard iamb-centered English canons (while preserving and seeking to refine English phonological alignment accuracy); better accommodation of World poetry in meter-matching English translation (in other words, English canon levels of iambic base meter predominance should not be pre-assumed for Englished World (aka "Worldish") poetry canons); likewise, the mechanics of Calliope TS proceed from a choice not to essentialize ternary meters as inherently rare solely from English canon distributions (statistical fatalism); we, furthermore, aim to extend scansion accuracy over accentual verse forms; and, beyond scansion itself, hope to gradually incorporate nuanced and diversified identification of a broad range of poetic forms and devices (currently supported: rhyme types; in the future: alliterations, anaphoras, trope/cliche identifications, and more). 
+Bruce Hayes himself (2005) and Gareth McAleese (2007/2008) built the first faithful algorithmic/computational implementations of a verse scansion procedure around those two ideas. Calliope TS re-implements that architecture on a modern JavaScript/TypeScript stack, while attempting to push it into distinctive directions. Among these: deliberately looser pre-attunement to standard iamb-centered English canons (while preserving and seeking to refine English phonological alignment accuracy); better accommodation of World poetry in meter-matching English translation (in other words, English canon levels of iambic base meter predominance should not be pre-assumed for Englished World (aka "Worldish") poetry canons); likewise, the mechanics of Calliope TS proceed from a choice not to essentialize ternary meters as inherently rare solely from English canon distributions (statistical fatalism); we, furthermore, aim to extend scansion accuracy over accentual verse forms; and, beyond scansion itself, hope to gradually incorporate nuanced and diversified identification of a broad range of poetic forms and devices (currently supported: rhyme types; in the future: alliterations, anaphoras, trope/cliche identifications, and more).
 
 
 The current pipeline has eight stages.
 
-**1. Grammatical parsing.** 
+**1. Grammatical parsing.**
 The line is tokenized, part-of-speech tagged, and dependency-parsed — that is, the engine works out which word grammatically governs which (subject of what verb, object of what preposition) — using `udpipe-node` (our Node/JS/WASM port of UDPipe), now generating Universal Dependencies (UD) trees and morphological features. (For legacy comparison, the toolkit's built-in "Clio" alternate mechanics persist in using the FinNLP family of libraries (`lexed`, `en-pos`, `en-parse`) instead). A conversion layer seamlessly translates UD tags into the Penn Treebank tags our prosody expects. Two correction layers sit inside this stage,
 First, because poetry tends to break part-of-speech and grammatical dependency taggers in predictable ways, a *tag-repair* pass fixes systematic errors before the dependency tree is built (this appropriately accounts for rare exotics and awkward/shifty commonplaces alike: from archaic forms like *thou/thy/doth/wherefore*, to the pronoun *I*, to perfect-tense participles like *had quit*).
 Then we leverage a *tree-repair* pass (using the [depedits](https://www.npmjs.com/package/depedits) rule engine, our TypeScript port of the DepEdit library, originally in Python), which fixes systematic phrasal role attachment errors (e.g. noun compounds parsed as double objects, and the like). Hyphenated compounds and contractions (like *we'll*, *don't*, archaic *fix'd*, etc) are re-merged into single metrical words.
 
-**2. Lexical stress.** 
+**2. Lexical stress.**
 Every word is looked up for its pronunciation — syllable count, primary/secondary/unstressed pattern, syllable weights, vowel quantities — via our [nounsing-pro](https://www.npmjs.com/package/nounsing-pro) NLP toolkit, build over a full-scope CMU dictionary augmented with phonological and morphological data: syllable count, stress pattern (primary / secondary / unstressed), syllable weights, consonant types, morphological complexity and
 vowel quantities. Words not in the dictionary go through a morphological fallback (strip a productive suffix, look up the stem, restore) coupled with a quantity-sensitive English Stress Rule. Poetic elisions are honored: *heav'n* is parsed as one syllable, so is *o'er*, *th'expense* as two, *'tis/'twas* reduces, while archaic *-'d* / *-'st* forms (*fix'd*, *stopp'st*) retain their elided syllable counts.
 
@@ -308,7 +308,7 @@ interface PhonologicalScansionDetail {
 }
 ```
 
-Lower-level functions (`parseDocument`, `assignLexicalStress`, `buildPhonologicalHierarchy`, `scoreMeters`, …) are exported from their modules under `calliope-ts/dist/*` for users who want to run or modify individual pipeline stages. 
+Lower-level functions (`parseDocument`, `assignLexicalStress`, `buildPhonologicalHierarchy`, `scoreMeters`, …) are exported from their modules under `calliope-ts/dist/*` for users who want to run or modify individual pipeline stages.
 
 The optional Scandroid comparison engines (Charles Hartman's "Corral the Weird" and "Maximize the Normal") are exported from `calliope-ts/dist/scandroid.js`.
 
@@ -385,19 +385,19 @@ node trials/corpus_benchmark.mjs      # litlab / prosodic / epg64 meter corpora
 Apache-2.0. © Aleksey Calvin Tsukanov / SilverAgePoets.com. <br>
 My email: alekseycalvin@gmail.com <br>
 
-Methodological and conceptual debts: 
+Methodological and conceptual debts:
 - Michael Wagner (Prosody and Recursion, MIT, 2005) (for further clarifying the inter-relational nuances of prosody and syntax).
 - Manfred Krifka (2001/2002) (for so poignantly elucidating NSR and CSR beyond SPE).
 - Bruce Hayes (1982/1984/1995/1996 with Abigail Kaun/2005) (the phonological scansion procedure as such, extrametricality insights, text-setting methodologies, MaxEnt OT, and who knows what else);
-- Gareth McAleese (for a single 2008 paper, for detailing the original Calliope implementation, for exhibiting a remarkable field-spanning purview, an uncanny industriousness, and an uncommon – perhaps a tad obsessive – dedication to testing, refining, fusing, and extending all sorts of methodologies in a single-minded pursuit of bringing constraint-based computational scansion far beyond the best documented practices and results at that time; and for so obviously succeeding, if only to seemingly vanish from the field as abruptly and unreservedly as he entered and absorbed it*); 
-- Charles O. Hartman (Scandroid); 
-- Claire Moore Cantwell (morphological/phonological tagging algorithms), 
-- Austin Pursley (implementing finer-grained rhyme-matching heuristics over a corpus), 
-- Allison Parrish (Pronouncing-py and being a real life computational poet hero), 
-- Derek Attridge (beat/offbeat rhythm theory and insightful writings on the English dolnik); 
-- M. L. Gasparov (dolnik/taktovik taxonomy); 
-- the compilers of the CMU Pronouncing Dictionary; 
+- Gareth McAleese (for a single 2008 paper, for detailing the original Calliope implementation, for exhibiting a remarkable field-spanning purview, an uncanny industriousness, and an uncommon – perhaps a tad obsessive – dedication to testing, refining, fusing, and extending all sorts of methodologies in a single-minded pursuit of bringing constraint-based computational scansion far beyond the best documented practices and results at that time; and for so obviously succeeding, if only to seemingly vanish from the field as abruptly and unreservedly as he entered and absorbed it*);
+- Charles O. Hartman (Scandroid);
+- Claire Moore Cantwell (morphological/phonological tagging algorithms),
+- Austin Pursley (implementing finer-grained rhyme-matching heuristics over a corpus),
+- Allison Parrish (Pronouncing-py and being a real life computational poet hero),
+- Derek Attridge (beat/offbeat rhythm theory and insightful writings on the English dolnik);
+- M. L. Gasparov (dolnik/taktovik taxonomy);
+- the compilers of the CMU Pronouncing Dictionary;
 - the makers of Prosodic (Heuser et al, for establishing an admirable state-of-the-art to compare against, differentiate from, and hopefully surpass in due time, in select ways),
-- Milan Straka and the UDPipe project (for the robust neural parsing architecture now driving the core mechanics), 
+- Milan Straka and the UDPipe project (for the robust neural parsing architecture now driving the core mechanics),
 - as well as broader generative-metrics, constraint-based metrics, and OT traditions, including Kiparsky, Prince & Smolensky, Groves, Blumenfeld, Lilja, Chomsky & Halle, Fabb & Halle (rule-based grid scansion theory), Einarsson (Metremic theory), Russom (Universalist metrics), K. M. Ryan (gradient syllable weight), big daddy Jakobson who had once roped the whole world with subtle strings and often hung out with Mayakovsky, and many others. <br>
 *Gareth McAleese: If you're reading this, please do email me!

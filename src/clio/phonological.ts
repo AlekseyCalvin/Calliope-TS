@@ -215,7 +215,7 @@ function groupIntoPhonologicalPhrases(
   // For each CP, determine which phrase node contains its head word,
   // preferring the smallest (most specific) node.
   const cpToPP = new Map<CliticGroup, ClsNode | null>();
-  
+
   for (const cg of cgs) {
     const headWord = cg.tokens.find(w => isContent(w))!;
     if (!headWord) {
@@ -638,7 +638,7 @@ export function syllabifyWord(word: string, syllableCount: number, vowelLengths?
       return parts;
     }
   }
-  
+
   const cleanWord = word.replace(/-/g, '');
   if (cleanWord.length <= syllableCount) {
     if (cleanWord.length === syllableCount) return cleanWord.split('');

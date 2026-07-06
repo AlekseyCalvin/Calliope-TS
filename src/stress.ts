@@ -1123,7 +1123,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
 
     const syllables: Syllable[] = [];
     const weightsArray = (profile.weightPattern || '').split(' ').filter(x => x === 'H' || x === 'L');
-    
+
     // Determine extrametricality classification for the final syllable.
     // Uses Hayes (1980) constraints: only Light edge syllables, only noun final syllables,
     // morphological s/z (plural/tense) markers, and derivational suffixes in adjectives.
@@ -1136,7 +1136,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
     const isAdj = word.lexicalClass.startsWith('JJ');
     const finalWeight = profile.weight.find(w => w.syllable === 'final')?.heaviness ?? '';
     const nsylls = rawStress.length;
-    
+
     let extrametricalType: Syllable['extrametrical'] = undefined;
     if (nsylls >= 2) {
       if ((sClassifier === 'S' || sClassifier === 'SCluster') && isNoun) {
@@ -1169,7 +1169,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
       const rLen = rawStress.length;
       const wIdx = wPatLen - (rLen - i);
       const weight = wIdx >= 0 && wIdx < wPatLen ? weightsArray[wIdx] as 'H' | 'L' : 'L';
-      
+
       const sylTextMatch = syllsMatch[i];
       const sylText = sylTextMatch ? sylTextMatch.replace(/[()]/g, '') : word.word;
 

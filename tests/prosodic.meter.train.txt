@@ -13189,4 +13189,3 @@
 6	Toast	+	:	VBD	1	anapaest	anapaest.di.plus	--+--+-+
 7	ed	-	:	VBD	2	anapaest	anapaest.di.plus	--+--+-+
 8	cheese	+	.	NN	0	anapaest	anapaest.di.plus	--+--+-+
-

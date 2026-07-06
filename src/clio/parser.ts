@@ -419,7 +419,7 @@ function isContentWord(tag: string): boolean {
 
 /**
  * Parse a multi‑sentence text string and return a ClsDocument whose
- * internal structure mirrors the Antelope NLP (aka Universal Dependency type) 
+ * internal structure mirrors the Antelope NLP (aka Universal Dependency type)
  * output from McAleese’s original Calliope implementation.
  */
 export function parseDocument(text: string): ClsDocument {

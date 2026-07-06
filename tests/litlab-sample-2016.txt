@@ -1735,4 +1735,3 @@ pentameter	iambic	Z300484126				Look on my works, ye Mighty, and despair!?	(11, 
 pentameter	iambic	Z300484126				Nothing beside remains. Round the decay	(12, 0)	swwswsswws	s|ww|s|w|ss|ww|s
 pentameter	iambic	Z300484126				Of that colossal wreck, boundless and bare	(13, 0)	wswswsswws	w|s|w|s|w|ss|ww|s
 pentameter	iambic	Z300484126				The lone and level sands stretch far away.	(14, 0)	wswswswsws	w|s|w|s|w|s|w|s|w|s
-

@@ -8136,4 +8136,3 @@
 6	when	+	:	WRB	0	iambic	iambic.tetra	-+-+-+-+
 7	the	-	.	DT	0	iambic	iambic.tetra	-+-+-+-+
 8	sun	+	:	NN	0	iambic	iambic.tetra	-+-+-+-+
-

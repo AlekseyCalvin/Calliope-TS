@@ -1,7 +1,7 @@
-# LLM Context for 
+# LLM Context for
 
-Generated on: 2026-07-02 20:25:55  
-Repository: `.`  
+Generated on: 2026-07-02 20:25:55
+Repository: `.`
 Total files: 41
 
 ---
@@ -4674,7 +4674,7 @@ function isContentWord(tag: string): boolean {
 
 /**
  * Parse a multi‑sentence text string and return a ClsDocument whose
- * internal structure mirrors the Antelope NLP (aka Universal Dependency type) 
+ * internal structure mirrors the Antelope NLP (aka Universal Dependency type)
  * output from McAleese’s original Calliope implementation.
  */
 export function parseDocument(text: string): ClsDocument {
@@ -5320,7 +5320,7 @@ function groupIntoPhonologicalPhrases(
   // For each CP, determine which phrase node contains its head word,
   // preferring the smallest (most specific) node.
   const cpToPP = new Map<CliticGroup, ClsNode | null>();
-  
+
   for (const cg of cgs) {
     const headWord = cg.tokens.find(w => isContent(w))!;
     if (!headWord) {
@@ -5743,7 +5743,7 @@ export function syllabifyWord(word: string, syllableCount: number, vowelLengths?
       return parts;
     }
   }
-  
+
   const cleanWord = word.replace(/-/g, '');
   if (cleanWord.length <= syllableCount) {
     if (cleanWord.length === syllableCount) return cleanWord.split('');
@@ -9589,7 +9589,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
 
     const syllables: Syllable[] = [];
     const weightsArray = (profile.weightPattern || '').split(' ').filter(x => x === 'H' || x === 'L');
-    
+
     // Determine extrametricality classification for the final syllable.
     // Uses Hayes (1980) constraints: only Light edge syllables, only noun final syllables,
     // morphological s/z (plural/tense) markers, and derivational suffixes in adjectives.
@@ -9602,7 +9602,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
     const isAdj = word.lexicalClass.startsWith('JJ');
     const finalWeight = profile.weight.find(w => w.syllable === 'final')?.heaviness ?? '';
     const nsylls = rawStress.length;
-    
+
     let extrametricalType: Syllable['extrametrical'] = undefined;
     if (nsylls >= 2) {
       if ((sClassifier === 'S' || sClassifier === 'SCluster') && isNoun) {
@@ -9635,7 +9635,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
       const rLen = rawStress.length;
       const wIdx = wPatLen - (rLen - i);
       const weight = wIdx >= 0 && wIdx < wPatLen ? weightsArray[wIdx] as 'H' | 'L' : 'L';
-      
+
       const sylTextMatch = syllsMatch[i];
       const sylText = sylTextMatch ? sylTextMatch.replace(/[()]/g, '') : word.word;
 
@@ -13223,7 +13223,7 @@ function groupIntoPhonologicalPhrases(
   // For each CP, determine which phrase node contains its head word,
   // preferring the smallest (most specific) node.
   const cpToPP = new Map<CliticGroup, ClsNode | null>();
-  
+
   for (const cg of cgs) {
     const headWord = cg.tokens.find(w => isContent(w))!;
     if (!headWord) {
@@ -13670,7 +13670,7 @@ export function syllabifyWord(word: string, syllableCount: number, vowelLengths?
       return parts;
     }
   }
-  
+
   const cleanWord = word.replace(/-/g, '');
   if (cleanWord.length <= syllableCount) {
     if (cleanWord.length === syllableCount) return cleanWord.split('');
@@ -17680,7 +17680,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
 
     const syllables: Syllable[] = [];
     const weightsArray = (profile.weightPattern || '').split(' ').filter(x => x === 'H' || x === 'L');
-    
+
     // Determine extrametricality classification for the final syllable.
     // Uses Hayes (1980) constraints: only Light edge syllables, only noun final syllables,
     // morphological s/z (plural/tense) markers, and derivational suffixes in adjectives.
@@ -17693,7 +17693,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
     const isAdj = word.lexicalClass.startsWith('JJ');
     const finalWeight = profile.weight.find(w => w.syllable === 'final')?.heaviness ?? '';
     const nsylls = rawStress.length;
-    
+
     let extrametricalType: Syllable['extrametrical'] = undefined;
     if (nsylls >= 2) {
       if ((sClassifier === 'S' || sClassifier === 'SCluster') && isNoun) {
@@ -17726,7 +17726,7 @@ export function assignLexicalStress(words: ClsWord[]): void {
       const rLen = rawStress.length;
       const wIdx = wPatLen - (rLen - i);
       const weight = wIdx >= 0 && wIdx < wPatLen ? weightsArray[wIdx] as 'H' | 'L' : 'L';
-      
+
       const sylTextMatch = syllsMatch[i];
       const sylText = sylTextMatch ? sylTextMatch.replace(/[()]/g, '') : word.word;
 
@@ -18817,7 +18817,7 @@ export interface ClsWord {
                                       //   (set by the parser's de-capitalisation) — what reports
                                       //   and the phonopoetics show to the reader
   absoluteIndex: number;              // 0‑based index among all words in the text
-  isContent: boolean; 
+  isContent: boolean;
   // extended properties
   syllables: Syllable[];              // array of syllables for the word
   morphSuffix?: string;               // productive suffix split off for OOV stress (e.g. 'est'); guides display syllabification
