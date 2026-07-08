@@ -1,0 +1,63 @@
+# OS Spawned and Varied #
+#########################
+package-lock.json
+.DS_Store
+.DS_Store?
+.env
+/Extras/*
+/Archived/*
+/Sources2
+/Scandroid_py_source
+NOUNSING_AUGDIM_FIX.md
+/lvg2026lite
+/Logo_Variations
+Screenshot_FrontendRefine.png
+Wagner_Prosody_and_Recursion_2005_Chapter_5_Boundary_Scaling.md
+Wagner_Prosody_and_Recursion_Chapter_4_Boundary_Ranks.md
+Wagner_Prosody_and_Recursion_2005_Chapter_6_Recursion_and_Subordination.md
+EXTRA_CONTEXT.md
+TopikFokus4.pdf
+
+# Node.js Files #
+########################
+/node_modules/*
+/dist/*
+
+# Pre-edit module backups (kept on disk, not tracked) #
+#######################################################
+/.bak-xlevel/*
+
+# Compiled config artifacts (source of truth is the .ts) #
+##########################################################
+vitest.config.js
+# Compound-rule backup #
+/.bak-compound/*
+# Clitic-floor (nuclear/#2-revised) backup #
+/.bak-nuclear/*
+
+# Standalone nounsing-pro dictionary tools (not part of the build) #
+/nounsing-tools/*
+# OOV stress-rule backup #
+/.bak-oov/*
+# Syllable-count / forestress backup #
+/.bak-syl/*
+# Caesura + CLI-menu batch backup #
+/.bak-caesura-cli/*
+# Audit-fixes backup + all future pre-edit backups #
+/.bak-*/
+# Local convenience copy of the nounsing-pro package (lives on npm / its own repo) #
+/nounsing-pro_copy/
+# Embedded standalone repo (own git history) #
+/depedits/
+
+# Theory/reference library + corpus archives (kept on disk, not tracked) #
+/Sources/
+/*.pdf
+/eng_gutenberg_measures_all.json.zip
+
+# LYRICAL registry copies (reference only; live in the LYRICAL repo) #
+/registries.ts
+/meter_exemplars.ts
+
+# Standalone nounsing-pro dictionary tools (not part of the build) #
+/nounsing-tools/

@@ -1,0 +1,728 @@
+1	line text	O, I am a bachelor, I live by myself
+1	stress pattern	wnwxsxwnmxws
+2	line text	And the only, only thing that I ever did was wrong
+2	stress pattern	xxmwmwswmnxmxs
+3	line text	I wooed her in the summer time
+3	stress pattern	wmwxxswn
+4	line text	And many, many times I held her in my arms
+4	stress pattern	xnwnwswmwxws
+5	line text	One night she came to my bedside
+5	stress pattern	wswmxwsn
+6	line text	She threw her arms around my neck
+6	stress pattern	wmwmxnws
+7	line text	So all night long I held her in my arms
+7	stress pattern	xmnswmwxws
+8	line text	Again I'm a bachelor, I live with my son
+8	stress pattern	xmwxsxwnmxws
+9	line text	And every every time I look into his eyes
+9	stress pattern	xnwnwmwmwnws
+10	line text	He reminds me of the summer time
+10	stress pattern	wxmwxxswn
+11	line text	And the many, many times I held her in my arms
+11	stress pattern	xxmwmwswmwxws
+12	line text	O what should I spy but my own father's ship
+12	stress pattern	wmxwsxwmnws
+13	line text	O what is the matter my daughter Jane
+13	stress pattern	wmxxsxwmws
+14	line text	I fear you have had some ill sickness
+14	stress pattern	wswxmwnsw
+15	line text	O no! I've not had an ill sickness
+15	stress pattern	wswnmxnsw
+16	line text	But I have been sick and sick to my heart
+16	stress pattern	xmxwsxmxws
+17	line text	Or is it by chance that rakish lad
+17	stress pattern	xwnxswmws
+18	line text	O no! It is not a noble noble knight
+18	stress pattern	wswxsxmwmws
+19	line text	If you will marry my daughter Jane
+19	stress pattern	xwxmxwmws
+20	line text	This day you shall sup and dine with me
+20	stress pattern	wsnwmxsxw
+21	line text	O I will marry your daughter Jane
+21	stress pattern	wnwmxwmws
+22	line text	And today I will sup and dine with you
+22	stress pattern	xwswxmxsxw
+23	line text	For I have houses and I have land
+23	stress pattern	wmwswxmns
+24	line text	And had it not been for your daughter Jane
+24	stress pattern	xmxwmxwmws
+25	line text	And downstairs ran this odd lady, O!
+25	stress pattern	xmnmwxsxn
+26	line text	One sang high and the other sang low
+26	stress pattern	snmxxmwmn
+27	line text	And the other sang bonny, bonny Biscay, O!
+27	stress pattern	xxmwnswmwswn
+28	line text	And put on hose of leather, O!
+28	stress pattern	xmnsxswm
+29	line text	The ragged, ragged rags about our door
+29	stress pattern	xmwmwsxnws
+30	line text	She's gone with the raggle taggle gypsies, O!
+30	stress pattern	wmwxmwnwswn
+31	line text	It was late last night when my lord came home
+31	stress pattern	wxmnswnmws
+32	line text	Enquiring for his a-lady, O!
+32	stress pattern	wmwxnxswn
+33	line text	O, saddle to me my milk-white steed
+33	stress pattern	nswxmwmns
+34	line text	Go and fetch me my pony, O!
+34	stress pattern	mxsnwswn
+35	line text	That I may ride and seek my bride
+35	stress pattern	wnwsxmws
+36	line text	Who is gone with the raggle taggle gypsies, O!
+36	stress pattern	wxsxxmwnwswn
+37	line text	O, he rode high and he rode low
+37	stress pattern	nwnsxwns
+38	line text	He rode through woods and copses, too
+38	stress pattern	wmxmxsws
+39	line text	Until he came to an open field
+39	stress pattern	wnwmxxmws
+40	line text	And there he spied his fay lady, O!
+40	stress pattern	xmnmwxswn
+41	line text	What makes you leave your house and land?
+41	stress pattern	nmwmwmxs
+42	line text	What care I for my house and my land?
+42	stress pattern	wmnxwmxws
+43	line text	What care I for my new wedded lord
+43	stress pattern	wmnxwmnws
+44	line text	Last night you slept on a goose-feather bed
+44	stress pattern	wmwswxmnws
+45	line text	With the sheet turned down so bravely, O!
+45	stress pattern	wxmnsxswn
+46	line text	And tonight you'll sleep in a cold open field
+46	stress pattern	xwswmwxsnws
+47	line text	Along with the raggle taggle gypsies, O!
+47	stress pattern	wnwxmwnwswn
+48	line text	What care I for a goose-feather bed
+48	stress pattern	wmnwxmnws
+49	line text	For tonight I shall sleep in a cold open field
+49	stress pattern	xwsnwmxxsnws
+50	line text	I'd just as soon be a beggar as a king
+50	stress pattern	wnxmwxswxxm
+51	line text	A king cannot swagger, nor drink like a beggar
+51	stress pattern	xmnwswxmwxsw
+52	line text	Let the back and the sides go bare, my boys
+52	stress pattern	mxsxxsnswm
+53	line text	But give to the belly, boys, beer enough
+53	stress pattern	xmxxswnswn
+54	line text	Sometimes we are lame, sometimes we are blind
+54	stress pattern	nmwxsnmwxs
+55	line text	The keeper did a shooting go
+55	stress pattern	xswnxswm
+56	line text	And under his coat he carried a bow
+56	stress pattern	xnxwswmwxs
+57	line text	All for to shoot at a merry little doe
+57	stress pattern	mxxmxxmwmws
+58	line text	Hey down, ho down, derry derry down
+58	stress pattern	snsnswmws
+59	line text	To my hey, down, down, to my ho, down, down
+59	stress pattern	xwmnsxwsnm
+60	line text	The fourth doe she did cross the plain
+60	stress pattern	xsnwnmxs
+61	line text	The keeper fetch'd her back again
+61	stress pattern	xswmwswm
+62	line text	Where she is now she may remain
+62	stress pattern	wnwswnws
+63	line text	The keeper fetch'd her back with his crook
+63	stress pattern	xswmwmxws
+64	line text	But he with his hounds did turn her again
+64	stress pattern	xmxwswmwxs
+65	line text	And it's there he did hunt in a merry, merry vein
+65	stress pattern	xwswxmxxmwmws
+66	line text	There was a farmer had three sons
+66	stress pattern	wnxswmns
+67	line text	And he came home tight in the middle of the night
+67	stress pattern	xnmnsxxmwxxs
+68	line text	The first he was a stout miller
+68	stress pattern	xsnmxnsw
+69	line text	And the third to be sure was a little tailor
+69	stress pattern	xxsxwswxmwsw
+70	line text	The stout miller he stole the corn
+70	stress pattern	xnswnmxs
+71	line text	And the tailor went forth and he stole broadcloth
+71	stress pattern	xxswnsxwsnm
+72	line text	And the devil ran away with the tailor one day
+72	stress pattern	xxmwnwsxxswxm
+73	line text	Bold Nelson's praise I'm going to sing
+73	stress pattern	nmwswmwxs
+74	line text	(Not forgetting our glorious King)
+74	stress pattern	nwmxwmws
+75	line text	There was Sydney Smith and Duncan too
+75	stress pattern	nxmwsxsws
+76	line text	Lord Howe and all the glorious crew
+76	stress pattern	nsxwxmws
+77	line text	They were the men that were true blue
+77	stress pattern	wnxmxmns
+78	line text	Full of care, yet I swear
+78	stress pattern	mxsnws
+79	line text	None with Nelson could compare
+79	stress pattern	mxswxwm
+80	line text	Bold Buonaparte he threaten'd war
+80	stress pattern	nswnwmws
+81	line text	A man who fear'd not wound nor scar
+81	stress pattern	xmwmwmxs
+82	line text	Lord Nelson's actions made him quake
+82	stress pattern	nswswmws
+83	line text	And all French powers he made to shake
+83	stress pattern	xmnswnmxs
+84	line text	He said his king he'd ne'er forsake
+84	stress pattern	wmwmwnws
+85	line text	These last words Thus he spake
+85	stress pattern	mnsnws
+86	line text	Stand true my lads like hearts of oak
+86	stress pattern	nswmwmxs
+87	line text	Lord Nelson bold, though threaten'd wide
+87	stress pattern	nswswmws
+88	line text	And many a time he had been tried
+88	stress pattern	xnwxmnwxs
+89	line text	He fought like a hero till he died
+89	stress pattern	wmwxswmns
+90	line text	But the day was won, their line was broke
+90	stress pattern	xxmwswmws
+91	line text	While all around was lost in smoke
+91	stress pattern	wnxmwmxs
+92	line text	And Nelson he got his death stroke
+92	stress pattern	xswnmwsn
+93	line text	He faced his foe with his sword in hand
+93	stress pattern	wmwsxwmxs
+94	line text	I am a sailor stout and bold,
+94	stress pattern	wnxswmxs
+95	line text	I fight for my king and country too
+95	stress pattern	wmxwsxsws
+96	line text	I travel'd the country through and through,
+96	stress pattern	wmwxswmxs
+97	line text	If you should want to know my name,
+97	stress pattern	xnwmxmws
+98	line text	I've got permission from the King
+98	stress pattern	wmwswxxs
+99	line text	I said:  my dear, what will you do?
+99	stress pattern	wswsnmws
+100	line text	Here's ale and wine and brandy too;
+100	stress pattern	wmxmxsws
+101	line text	Besides a pair of new silk shoes,
+101	stress pattern	wnxmxmns
+102	line text	The king's permission granted me
+102	stress pattern	xmwswswn
+103	line text	From Bristol Town to Liverpool,
+103	stress pattern	xswnxswn
+104	line text	And in whatever town I went,
+104	stress pattern	xxwmwsws
+105	line text	To court young maidens I was bent;
+105	stress pattern	xmnswnwm
+106	line text	And marry none was my intent,
+106	stress pattern	xmwswnws
+107	line text	My man John, what can the matter be,
+107	stress pattern	mnswnxswn
+108	line text	She won't be my joy, my joy nor my dear
+108	stress pattern	wmnwswmxws
+109	line text	And you will win the lady in the space of half a year;
+109	stress pattern	xnwmxswxxmxmxs
+110	line text	And she shall take a walk with you anywhere.
+110	stress pattern	xnwmxsxwswn
+111	line text	O Madam, I will give to you a little greyhound,
+111	stress pattern	wswnwmxwxmwsn
+112	line text	And every hair upon its back shall cost a thousand pound,
+112	stress pattern	xnwmxnwswmxmws
+113	line text	O Sir, I won't accept of you a little greyhound,
+113	stress pattern	wswmwsxwxmwsn
+114	line text	O Madam, I will give to you a fine ivory comb,
+114	stress pattern	wswnwsxwxnmws
+115	line text	To fasten up your silver locks when I am not at home,
+115	stress pattern	xmxmwmwswnwmxs
+116	line text	O Madam, I will give to you a cushion full of pins,
+116	stress pattern	wswnwsxwxmwmxs
+117	line text	O Madam, I will give to you the keys of my heart,
+117	stress pattern	wswnwmxwxmxws
+118	line text	To lock it up for ever that we never more shall part,
+118	stress pattern	xmwmxswnwmwmws
+119	line text	O sir, I will accept of you the keys of your heart,
+119	stress pattern	wswnwsxwxmxws
+120	line text	There was a little man and he had a little wife
+120	stress pattern	nwxmwsxwmxmws
+121	line text	And he loved her as dear as he loved his life
+121	stress pattern	xwmwxmxwmws
+122	line text	Was just to put her lips to a little crab-fish
+122	stress pattern	wnxmwmxxmwsn
+123	line text	Then up her man arose and he girt him in his clothes,
+123	stress pattern	wmwmwsxwmwxws
+124	line text	And down to the seaside he follow'd his nose
+124	stress pattern	xnxxsnwmwns
+125	line text	O fisherman, O fisherman, O come and tell me
+125	stress pattern	nsxwnsxwnmxsw
+126	line text	Have you a little crab-fish you can sell me?
+126	stress pattern	wnxmwswnwsw
+127	line text	O yes, and O yes, I have one, two and three,
+127	stress pattern	wsxwswnmnxs
+128	line text	And the best of them all I will sell to thee
+128	stress pattern	xxmxwswnsxw
+129	line text	O wife put thy lips to this little crab-fish
+129	stress pattern	wsnwmxwmwsn
+130	line text	Then the wife just to smell him popped up from the clothes,
+130	stress pattern	wxswxswnmxxs
+131	line text	When up got the crab fish and nipped her by the nose.
+131	stress pattern	wsnxsnxmwxxs
+132	line text	Hey man and ho man, come hither do ye hear?
+132	stress pattern	snxsnwswnws
+133	line text	But the crab fish was ready and caught him by the ear.
+133	stress pattern	xxsnwswxmwxxs
+134	line text	Come and I will sing to you.
+134	stress pattern	sxnwsxm
+135	line text	I will sing you one-ery
+135	stress pattern	nwmwswm
+136	line text	Eleven and eleven are the keys of heaven,
+136	stress pattern	wmwxwswxxmxsw
+137	line text	Nine are the nine that brightly shine,
+137	stress pattern	mwxmwmws
+138	line text	Seven are the seven stars in the sky,
+138	stress pattern	swxxmwmxxs
+139	line text	Five are the flam boys under the boat,
+139	stress pattern	mwxmnmxxs
+140	line text	And two and two are lily-white babes
+140	stress pattern	xmxmwmwns
+141	line text	One and One is all alone,
+141	stress pattern	mxmwnws
+142	line text	There was a star in David's land
+142	stress pattern	nwxsxmwm
+143	line text	That a Princely Babe was born that night,
+143	stress pattern	wxmwswmwm
+144	line text	If this be the truth, King Herod said,
+144	stress pattern	xmwxsnmws
+145	line text	The roasted cock that lies in the dish
+145	stress pattern	xmwswmwxs
+146	line text	O the cock soon thrusted and feathered well,
+146	stress pattern	nxmwswxmws
+147	line text	And he did crow full senses three
+147	stress pattern	xnwsnmws
+148	line text	Oh! don't you see the turtle dove
+148	stress pattern	wnwmxswn
+149	line text	Sitting under the yonder tree
+149	stress pattern	mwnwxnws
+150	line text	Lamenting for her own true love?
+150	stress pattern	wmwnwmns
+151	line text	And I will mourn for thee, my dear,
+151	stress pattern	xmwmxswm
+152	line text	If you must suffer grief and pain,
+152	stress pattern	xnwmwmxs
+153	line text	For though I go away, I'll return again,
+153	stress pattern	xwnmwsnwswm
+154	line text	If I row ten thousand mile, my dear,
+154	stress pattern	xwsnmwswm
+155	line text	Ten thousand mile is very far
+155	stress pattern	nmwswmws
+156	line text	With a heavy, heavy sigh and a bitter, bitter cry;
+156	stress pattern	wxmwmwsw=xmwmws
+157	line text	No one to hear my moan, my dear,
+157	stress pattern	mnxmwswm
+158	line text	I may not stay your grievous moan,
+158	stress pattern	wnwmwmws
+159	line text	Yet I will love but thee alone;
+159	stress pattern	xnwmxmws
+160	line text	Till the streams run from the seas, my dear,
+160	stress pattern	wxsnwxswm
+161	line text	The tides shall cease to beat the shore,
+161	stress pattern	xswmxmxs
+162	line text	Yet I will love thee more and more
+162	stress pattern	xnwmwsxm
+163	line text	Until the day I die, my dear,
+163	stress pattern	xnxmwswm
+164	line text	Then let the seas run dry, sweetheart,
+164	stress pattern	wmxmnsnm
+165	line text	Yet here I will stay, nor ever from thee part,
+165	stress pattern	xmwxsxmwxws
+166	line text	Till all my days are done, my dear,
+166	stress pattern	wmwmwswm
+167	line text	There was an old fox and he had a loving wife
+167	stress pattern	wnxnsxwmxmws
+168	line text	And he went out one moon shiny night
+168	stress pattern	xmnswmnws
+169	line text	He swore the fattest should grease his beard,
+169	stress pattern	wmxswxmws
+170	line text	He took the grey goose by the neck,
+170	stress pattern	wmxnsnxs
+171	line text	And as he went along she went, "Quack, quack,"
+171	stress pattern	xxwmwswmns
+172	line text	Where he had little ones, eight, nine and ten,
+172	stress pattern	nwnswnsnxm
+173	line text	I placed my back against the old garden gate,
+173	stress pattern	wmwsxnxmnxs
+174	line text	To hear my true love sing, my boys,
+174	stress pattern	xmwmnswm
+175	line text	'Tis now very near three quarters of a year
+175	stress pattern	wsnwmnmwxxs
+176	line text	Since you and I together did stay."
+176	stress pattern	wmxmwmwxs
+177	line text	Come now my love and sit down by me,
+177	stress pattern	mnxmxnsxw
+178	line text	Since you and I together have been.
+178	stress pattern	wmxmwswxm
+179	line text	I will not come and sit down by you
+179	stress pattern	nwxmxnsxw
+180	line text	Since you have been courting some other young girl
+180	stress pattern	nwmxmwxswnm
+181	line text	O the Chesapeake so bold out of Boston she was towed
+181	stress pattern	wxmwnxsnxmwnxs
+182	line text	To take an English frigate neat and handy, O;
+182	stress pattern	xmxmwswmxswn
+183	line text	And the people all in port, they came out to see the sport,
+183	stress pattern	xxmwnxswnmxmxs
+184	line text	There was a lady near the town;
+184	stress pattern	wnxswnxs
+185	line text	She walked all night and all around,
+185	stress pattern	wmnsxwxs
+186	line text	First she leant against an oak;
+186	stress pattern	nwmxnxs
+187	line text	First it bent and then it broke.
+187	stress pattern	nwmxnxs
+188	line text	Next she leaned against a thorn
+188	stress pattern	nwmxnxs
+189	line text	Two sweet little babes to her were born.
+189	stress pattern	wsnxsxnwm
+190	line text	She got a rope so long and neat,
+190	stress pattern	wmxsxmxs
+191	line text	And tied them down both hands and feet.
+191	stress pattern	xmwswmxs
+192	line text	She got a knife so keen and sharp,
+192	stress pattern	wmxsxmxs
+193	line text	And pierced it through each tender heart.
+193	stress pattern	xmwxwmws
+194	line text	She walked out one moonlit night;
+194	stress pattern	wnmwmns
+195	line text	She saw her babes all dressed in white.
+195	stress pattern	wmwswmxs
+196	line text	Babes, O babes, if you were mine
+196	stress pattern	swsxnws
+197	line text	I'd dress you up in silk so fine.
+197	stress pattern	wmwsxmxs
+198	line text	Mother, O Mother, when we were thine
+198	stress pattern	swnswxnws
+199	line text	You neither dressed us coarse nor fine.
+199	stress pattern	wnwmwmxs
+200	line text	In seven years you'll hear a bell,
+200	stress pattern	xmwswmxs
+201	line text	In seven years you'll land in hell.
+201	stress pattern	xmwswmxs
+202	line text	It was late in the night when the Squire came home
+202	stress pattern	nwmxxswxsnm
+203	line text	His servant made a sure reply:
+203	stress pattern	wswmxmws
+204	line text	O go catch up my milk-white steed,
+204	stress pattern	wmnmwmns
+205	line text	I'll ride all night till broad daylight,
+205	stress pattern	wmwswnsn
+206	line text	He rode and he rode till he came to the town,
+206	stress pattern	wmxwsxwmxxs
+207	line text	The tears came rolling down his cheeks
+207	stress pattern	xswmwnws
+208	line text	It's come go back, my dearest dear,
+208	stress pattern	wmnswmws
+209	line text	I won't go back, my dearest dear,
+209	stress pattern	wsnmwmws
+210	line text	For I wouldn't give a kiss from gipsy's lips
+210	stress pattern	xwnwmxmxmws
+211	line text	It's go pull off those snow-white gloves
+211	stress pattern	wmnmwmns
+212	line text	And give to me your lily-white hand
+212	stress pattern	xmxnwmwns
+213	line text	It's she pulled off those snow-white gloves
+213	stress pattern	wmnmwmns
+214	line text	She soon ran through her gay clothing
+214	stress pattern	wmwnwnsw
+215	line text	Her gold ring off her finger's gone,
+215	stress pattern	wnswnswm
+216	line text	O once I had a house and land,
+216	stress pattern	nmwsxmxs
+217	line text	But now I've come to an old straw pad
+217	stress pattern	xmwsxxmws
+218	line text	There were three kings came from the West
+218	stress pattern	wmnswnxs
+219	line text	And they have taken a solemn oath
+219	stress pattern	xnwmwxmws
+220	line text	They took a plow and plowed him in
+220	stress pattern	wmxsxmws
+221	line text	So there he lay for a full fortnight
+221	stress pattern	xmwswxnsn
+222	line text	Then Barleycorn sprang up again
+222	stress pattern	wsxnwsxn
+223	line text	There he remained till midsummer
+223	stress pattern	mnwswnsw
+224	line text	Then Barleycorn he got a beard
+224	stress pattern	wsxnwmxs
+225	line text	And then poor Johnny Barleycorn
+225	stress pattern	xnwmwsxn
+226	line text	O Barleycorn is the choicest grain
+226	stress pattern	nsxnwxmws
+227	line text	It will do more than any grain
+227	stress pattern	wmnmxnws
+228	line text	There was a man lived in the West
+228	stress pattern	nwxmnxxs
+229	line text	He married a wife, she was not of the best;
+229	stress pattern	wmwxsnxmxxs
+230	line text	She was Ruggleton's daughter of Iero.
+230	stress pattern	nxmxwmwxswn
+231	line text	Said he, when he came in from plow:
+231	stress pattern	nswmnmxs
+232	line text	Ho!  Is my dinner ready now?
+232	stress pattern	snwmwswm
+233	line text	O if your dinner you must have,
+233	stress pattern	nxwswnwm
+234	line text	Then get it yourself; I am not your slave,
+234	stress pattern	wmnwswxnws
+235	line text	For I won't brew and I won't bake,
+235	stress pattern	xnwsxnws
+236	line text	And I won't make my white hands black,
+236	stress pattern	xnwmwmns
+237	line text	May the Heavens be your guide, my love
+237	stress pattern	wxmwnwswm
+238	line text	Oh, the lad that you have sent to sea
+238	stress pattern	nxmxnwmxs
+239	line text	I'm married to the lad I love
+239	stress pattern	wmwxxmws
+240	line text	The King he wrote a long letter
+240	stress pattern	xswmxnsw
+241	line text	And sent it to my Lord Dunwaters
+241	stress pattern	xmwxwnsnw
+242	line text	The first two lines that he did read
+242	stress pattern	xswmxnws
+243	line text	The next two lines Lord Dunwaters read
+243	stress pattern	xswmnsnwm
+244	line text	He goes out to his stable groom
+244	stress pattern	wnmxwmws
+245	line text	There he did spy a fair pretty maid
+245	stress pattern	wnwmxsnwm
+246	line text	'Twas eighteen hundred and twenty four
+246	stress pattern	wswmwxmws
+247	line text	We hoist our colors to the top of the mast
+247	stress pattern	wmwswxxmxxs
+248	line text	And to Greenland bore away, brave boys
+248	stress pattern	xxswmwsns
+249	line text	A fine young man it was indeed
+249	stress pattern	xmwswnws
+250	line text	He was mounted on his milk-white steed
+250	stress pattern	nxmwxwmns
+251	line text	He rode, he rode, himself all alone
+251	stress pattern	wmwswmwxs
+252	line text	Until he came to lovely Joan.
+252	stress pattern	wnwmxmws
+253	line text	It's of a man of Burmingham town,
+253	stress pattern	wxxmxsxwn
+254	line text	And she did love bad company
+254	stress pattern	xnwmwsxw
+255	line text	As dear as she loved her life, boys, life
+255	stress pattern	xmxmnwmws
+256	line text	Mother, mother, make my bed
+256	stress pattern	swswmws
+257	line text	And wrap me in a milk-white sheet
+257	stress pattern	xmwxxmns
+258	line text	And wrap me in a cloak of gold
+258	stress pattern	xmwxxmxs
+259	line text	On Monday morning I married a wife
+259	stress pattern	xmwswnmwxs
+260	line text	Thinking to live and a sober life
+260	stress pattern	mwxmxxmws
+261	line text	But as she turned out, I'd better been dead,
+261	stress pattern	xxwnswmwxs
+262	line text	The remarkable day that I was wed.
+262	stress pattern	xwmxwmwnxs
+263	line text	When I was young I lived in a hat
+263	stress pattern	wnwmwmxxs
+264	line text	You'd better be a maiden as a poor man's wife
+264	stress pattern	wmwnxswxxmws
+265	line text	You'd better be a maiden all the days of your life.
+265	stress pattern	wmwnxswnxmxws
+266	line text	Young Emma was a servant maid
+266	stress pattern	nmwnxswn
+267	line text	He plowed the main, much gold to gain
+267	stress pattern	wmxswsxm
+268	line text	For your cage shall be made of the very best of gold
+268	stress pattern	xwswnmxxmwmxs
+269	line text	O where have you been roving, Henry my son?
+269	stress pattern	nmwnwswmwns
+270	line text	I've been roving for my sweetheart, mother, make my bed soon
+270	stress pattern	nwswxwsnmwmwns
+271	line text	For I'm sick to my heart and I wants to lie down.
+271	stress pattern	xwmxwsxwmxns
+272	line text	A squire, a squire, he lived in the woods
+272	stress pattern	xmxmwnxxs
+273	line text	A little while and he passed a joke
+273	stress pattern	xmwmxwmxs
+274	line text	I'll do as much for my true love
+274	stress pattern	wmxmxwns
+275	line text	I'll sit and mourn all on her grave
+275	stress pattern	wmxmwxws
+276	line text	There was a youth and a well beloved youth
+276	stress pattern	wnxsxxmwnws
+277	line text	He loved the bailiff's daughter dear
+277	stress pattern	wmxmwmws
+278	line text	It's of a farmer's daughter dear
+278	stress pattern	nwxmwmws
+279	line text	Yesterday was a high holy day
+279	stress pattern	mwnwxnswm
+280	line text	And all the little school-fellows went out to play
+280	stress pattern	xnxmwnmwmwxs
+281	line text	Come bridle me my milk-white steed
+281	stress pattern	nswnwmns
+282	line text	And a strange hat on the stairs he found
+282	stress pattern	xxnsxxswm
+283	line text	One Good Friday morning our ship set sail.
+283	stress pattern	nwmwswnmwm
+284	line text	There I espied a fair pretty lass
+284	stress pattern	wnwmxsnwm
+285	line text	With a comb and a brush in her hand, her hand, her hand,
+285	stress pattern	xxsxxmxwswmwm
+286	line text	When the stormy winds did blow rough, rough,
+286	stress pattern	wxmwswmns
+287	line text	While we poor sailors are up and to the top
+287	stress pattern	wmnswxmxwxs
+288	line text	And the landlubbers lying down below, below, below,
+288	stress pattern	xxswxmwnwsxmws
+289	line text	My father bound me a prentice boy,
+289	stress pattern	wswmwxswm
+290	line text	In Cambridge town there lived a lass
+290	stress pattern	wswmwmxs
+291	line text	A young man came for courting her,
+291	stress pattern	xsnmwswm
+292	line text	I promised her I'd marry her
+292	stress pattern	wswmwswm
+293	line text	Instead of that I was content
+293	stress pattern	wmxswnws
+294	line text	You virgins all, I pray draw near,
+294	stress pattern	wmwswmws
+295	line text	It's of a Turkish lady brave
+295	stress pattern	mwxswmws
+296	line text	Who fell in love with an English slave,
+296	stress pattern	wsxmwxmws
+297	line text	As I walked out one midsummer morn
+297	stress pattern	xwnswmnws
+298	line text	Who should I see but my own true love
+298	stress pattern	mnwmxwmws
+299	line text	The birds of love so sweetly sing
+299	stress pattern	xmxsxmws
+300	line text	There's none but her, but her alone
+300	stress pattern	wmxsxmws
+301	line text	The sweet month of May is now coming on in
+301	stress pattern	xwmxswnmwxs
+302	line text	And the trees are in full bloom and the birds are in full tune
+302	stress pattern	xxswxnsxxswxns
+303	line text	So the maidens and their sweethearts like lambkins they do play
+303	stress pattern	wxmwxwsnwmwnwm
+304	line text	And welcome in young shepherd in the month of May
+304	stress pattern	xnwmwswxxmxs
+305	line text	In the month of May, in the month of May.
+305	stress pattern	xxmxsxxmxs
+306	line text	O where are you going to, my pretty maid,
+306	stress pattern	nmxwswmwmws
+307	line text	With your red rosy cheek and your coal-black hair?
+307	stress pattern	wxmnwswxmws
+308	line text	For it's dabbling in the dew makes the milkmaids fair.
+308	stress pattern	xwmwxxsnxmns
+309	line text	And her trimming and bobbins a trail on the ground.
+309	stress pattern	xwmwxmwxswxm
+310	line text	O madam, will you marry me, me, me,
+310	stress pattern	wswmnmwmws
+311	line text	There's none but you I've often said
+311	stress pattern	wmxswmws
+312	line text	Come write me down ye powers above.
+312	stress pattern	nmwswmwxs
+313	line text	The first I fancied was a young man's love.
+313	stress pattern	xmwswxxmns
+314	line text	It is a jewel all in my eyes
+314	stress pattern	nwxswnxws
+315	line text	And where my joy and comfort lies.
+315	stress pattern	nxwmxswm
+316	line text	Come change your ring with me, my love,
+316	stress pattern	nswmxnwm
+317	line text	It shall be a token of true love
+317	stress pattern	wnwxmwxns
+318	line text	Come rise you English colors, love
+318	stress pattern	wmwmwswm
+319	line text	'Twas early in the month of May
+319	stress pattern	wmwnxmxs
+320	line text	Down on the banks of daisy fair
+320	stress pattern	nwxmxmws
+321	line text	She did appear like Venus fair
+321	stress pattern	wnwmwmws
+322	line text	She was the neck and bosom fine
+322	stress pattern	wnxmxmws
+323	line text	So the greenest field shall be my bed
+323	stress pattern	wxmwswnws
+324	line text	A flowery pillow for my head,
+324	stress pattern	xmxwswxws
+325	line text	And the leaves which blow from tree to tree
+325	stress pattern	wxmwmxmxs
+326	line text	Shall be the covering over me.
+326	stress pattern	wnxsxwnxw
+327	line text	As I walked out one May morning
+327	stress pattern	nmwmwnsw
+328	line text	Who should I spy but a fair pretty maid
+328	stress pattern	mnwswxmnws
+329	line text	O Valentine's day comes but once a year.
+329	stress pattern	nswnmnxmxs
+330	line text	A pretty fair maid came to my bed side
+330	stress pattern	xmwnsnxwsn
+331	line text	Come all young lovers, I pray draw near,
+331	stress pattern	swnswnmws
+332	line text	Some shocking news you soon shall hear,
+332	stress pattern	wmwswmws
+333	line text	And when the same to you I've told
+333	stress pattern	wmxsxnws
+334	line text	Shall make your very blood run cold.
+334	stress pattern	wswmwmns
+335	line text	Jack Tar being sick and like to die,
+335	stress pattern	nsnwsxmxs
+336	line text	He had no place his head to lie,
+336	stress pattern	nwnmwsxm
+337	line text	And all the people when they passed by
+337	stress pattern	nwxmwnwnm
+338	line text	And among them all was a rich young squire
+338	stress pattern	xwnwnwxmns
+339	line text	A brisk young lass so buck and gay,
+339	stress pattern	xmnsxmxs
+340	line text	She went into the mill one day.
+340	stress pattern	wmnwxswm
+341	line text	From London town I went astray,
+341	stress pattern	xswnwm
+342	line text	'Twas in Oxford City I lost my way.
+342	stress pattern	wxmwswnmws
+343	line text	The finest girl that I did meet
+343	stress pattern	xmwmwnws
+344	line text	She treated me with kisses sweet.
+344	stress pattern	wmwnxmws
+345	line text	He's up to the rigs, he's down to the rigs,
+345	stress pattern	wmxxswmxxs
+346	line text	He's up to the rigs of London town.
+346	stress pattern	wmxxmxswn
+347	line text	As I was off riding over the moor
+347	stress pattern	xnxwmwnwxs
+348	line text	I saw the lawyer just before,
+348	stress pattern	wmxswnwm
+349	line text	O he is the valiant Turpin, O.
+349	stress pattern	nmwxmwswn
+350	line text	Come all that's around me and listen awhile,
+350	stress pattern	nmwxswxswxm
+351	line text	I will sing you a ditty that will cause you to smile
+351	stress pattern	nwmwxswnwmwxs
+352	line text	Concerning the wondrous sights I do declare,
+352	stress pattern	wnwxmwswnws
+353	line text	That you have all seen today at Bridgwater Fair.
+353	stress pattern	wnxnswmxmnxs
+354	line text	Our orders came on board, my boys,
+354	stress pattern	wswnxswm
+355	line text	All for to cruise and never refuse
+355	stress pattern	nxxsxmwns
+356	line text	From the Liverpool docks I bid adieu
+356	stress pattern	nxmwnswmws
+357	line text	To Sally, Kate and Molly too,
+357	stress pattern	xmwmxmws
+358	line text	With our sails unfurled, our anchor weighed,
+358	stress pattern	xwmwswmws
+359	line text	We're bound for to plow the watery main.
+359	stress pattern	wmxxsxmxws
+360	line text	When I was young and in my prime
+360	stress pattern	wmxsxnws
+361	line text	They gave to me the very best corn
+361	stress pattern	wmxnxmwns
+362	line text	The lady at the window high
+362	stress pattern	xmwxxmws
+363	line text	O lady gay, take pity I pray
+363	stress pattern	wmwsnsxwm
+364	line text	Where all young lads and swaggering blades
+364	stress pattern	wmnsxmxns

@@ -1,0 +1,66 @@
+{
+  "name": "calliope-ts",
+  "version": "0.0.7",
+  "description": "A phonological poetry scansion and analysis framework in TypeScript, extrapolating from the works & thought of G. McAleese (2008), M. Wagner (2005), B. Hayes, the makers of Scandroid (2005), and many others. With syntactic dependency parsing and further phrasal NLP via udpipe-node, our js/WASM conversion of UDPipe, plus deep phono/morphological analysis word-by-word using our Nounsing Pro kit.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "calliope-ts": "dist/index.js",
+    "calliope-web": "webapp/server.mjs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm src/index.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
+    "web": "node webapp/server.mjs"
+  },
+  "keywords": [
+    "nlp",
+    "scansion",
+    "Udpipe",
+    "meter",
+    "metre",
+    "analysis",
+    "poetics",
+    "verse",
+    "poetic",
+    "literature",
+    "prosody",
+    "prosodic",
+    "scandroid",
+    "typescript",
+    "javascript",
+    "syntax",
+    "morphology",
+    "calliope",
+    "calliope_ts",
+    "poetry",
+    "silveragepoets",
+    "parser",
+    "ud"
+  ],
+  "author": "Aleksey Calvin Tsukanov",
+  "license": "apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "depedits": "^0.0.1",
+    "en-norm": "0.0.2",
+    "en-parse": "^1.1.0",
+    "en-pos": "^1.0.13",
+    "finnlp": "^1.0.0",
+    "lexed": "^1.0.10",
+    "nounsing-pro": "0.0.9",
+    "udpipe-node": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/prompts": "^2.4.9",
+    "ts-node": "^10.9.0",
+    "typescript": "~5.8.2",
+    "vitest": "^2.1.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "calliope-web",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["webapp/server.mjs"],
+      "port": 4321
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# ── Calliope TS npm publish exclusions ──
+# Ship: dist/, src/, webapp/, package.json, README.md, LICENSE.  Exclude everything else.
+
+# Design SOURCE material — the webapp ships its own trimmed copies
+# in webapp/public/assets/ (only the fonts + logos the UI actually uses)
+Visual_Inspirations/
+FONTS/
+Logo_Variations/
+
+# Feedback screenshots & session scratch
+Screenshot*.png
+CLI_Screenshot*.png
+CLI_screenshot*.png
+.claude/
+
+# Test corpora & dev configs
+tests/
+vitest.config.*
+pre-commit-config.yaml
+gitignore
+
+# Reference/theory material
+Sources/
+*.pdf
+*.zip
+
+tsconfig.json
+/node_modules/*
+
+# Local copies of standalone packages (live on npm / their own repos)
+depedits/
+nounsing-pro_copy/
+nounsing-tools/
+
+# LYRICAL registry copies (reference only)
+registries.ts
+meter_exemplars.ts
+
+# Project logs, audits, evaluations
+AGENTS.md
+AUDIT_*.md
+DEPEDITS_EVAL_*.md
+PLAN_*.md
+
+# Dev configs and backups
+.bak-*/
+Extras/
+Archived/
+.DS_Store
+archived
+extras
