@@ -1,0 +1,27 @@
+# .git is intentionally NOT excluded: the Dockerfile runs `git lfs pull` to
+# materialize LFS-tracked binaries (*.png, *.ttf) that HF Hub force-stores as
+# pointer files when uploaded via the web UI or huggingface-cli. The Dockerfile
+# deletes .git after the pull, so the final image stays lean.
+node_modules
+dist
+.gitignore
+.DS_Store
+**/.DS_Store
+**/.bak-*
+Extras
+Archived
+Sources
+nounsing-tools
+nounsing-pro_copy
+depedits
+*.pdf
+*.zip
+
+# HF Space metadata lives in the space repo root, not inside the image build.
+hf-space
+
+# Test/dev artifacts not needed at runtime.
+tests
+trials
+vitest.config.*
+pre-commit-config.yaml
