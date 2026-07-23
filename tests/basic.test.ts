@@ -13,7 +13,7 @@ import { ScansionMachine } from '../src/scandroidNative/machine.js';
 import { scanLineNatively } from '../src/scandroidNative/engine.js';
 import { analyzeText, feedMultilineEvent, newMLState, ML_IDLE_MS, type MLEvent } from '../src/index.js';
 import type { PhonologicalScansionDetail } from '../src/types.js';
-import { classifyRhymePair, detectScheme, summarizePoem, analyzePhonopoetics } from '../src/rhyme.js';
+import { classifyRhymePair, detectScheme, summarizePoem, analyzePhonopoetics, rhymeKey } from '../src/rhyme.js';
 import { metricalityVerdict } from '../src/scansion.js';
 import { analyzeStanzas } from '../src/index.js';
 import { computeCaesurae } from '../src/caesura.js';
@@ -854,14 +854,44 @@ describe('metricality, foot names, beats & poem-wide rhyme (2026-06-13)', () => 
     expect(metricalityVerdict(committed)).toBeUndefined();
   });
 
-  it('end-rhyme types are preserved; lettering stays per-stanza (not poem-wide)', () => {
+  it('end-rhyme types are preserved; lettering is poem-wide (not per-stanza)', () => {
     // The rhyme TYPE rides on the line that completes the rhyme (dressed/expressed → rich).
     const c = analyzeStanzas('True wit is nature to advantage dressed,\nWhat oft was thought, but ne’er so well expressed.');
     expect(c.flat()[1].phonologicalScansion.rhyme!.type).toBe('rich');
-    // Two couplets of different sounds, in separate stanzas, each restart at A —
-    // the scheme is per-stanza, NOT a poem-wide letterer.
+    // Two couplets of UNRELATED sounds, in separate stanzas: each stanza still
+    // reads AA on its own, but the two A's must be DIFFERENT poem-wide keys —
+    // lettering runs once over the whole poem, so an unrelated stanza never
+    // reuses an earlier stanza's letter.
     const two = analyzeStanzas('The cat sat on the mat,\nbeside a sleeping rat.\n\nThe sun was in the sky,\nas clouds went drifting by.');
-    expect(two.map(st => st.map(l => l.phonologicalScansion.rhyme!.letter).join(''))).toEqual(['AA', 'AA']);
+    expect(two.map(st => st.map(l => l.phonologicalScansion.rhyme!.letter).join(''))).toEqual(['AA', 'BB']);
+  });
+
+  it('a stanza-1 line rhyming ONLY with a stanza-2 line still shares one poem-wide key', () => {
+    // L1 "still" and L4 "chill" bind ACROSS the stanza break; L2 "wall" and
+    // L3 "light" are each unrhymed on their own.  The end-rhyme letter must
+    // be identical on both lines, matchedLine must be the POEM-GLOBAL index
+    // of L1 (0, not stanza-local), and the synopsis' End-Rhyme Scheme row
+    // must read off exactly the same per-line letters (single source of truth).
+    const text = 'The house was calm and still,\nbeyond the garden wall,\n\n'
+      + 'we watched the fading light,\nuntil the coming chill.';
+    const r = analyzeStanzas(text);
+    const l1 = r[0][0].phonologicalScansion.rhyme!;
+    const l4 = r[1][1].phonologicalScansion.rhyme!;
+    expect(l1.letter).not.toBe('·');
+    expect(l1.letter).toBe(l4.letter);                        // (i) same poem-wide letter
+    expect(l4.matchedLine).toBe(0);                           // (iii) poem-global index of L1
+    const perLine = r.flatMap(st => st.map(l => l.phonologicalScansion.rhyme!.letter)).join('');
+    const row = summarizePoem(r).find(row => row.label === 'End-Rhyme Scheme')!.value;
+    expect(row).toBe(perLine);                                // (ii) synopsis matches per-line letters
+  });
+
+  it('rhymeKey: unbounded bijective base-26 (A…Z, then AA, AB, …)', () => {
+    expect(rhymeKey(0)).toBe('A');
+    expect(rhymeKey(25)).toBe('Z');
+    expect(rhymeKey(26)).toBe('AA');
+    expect(rhymeKey(27)).toBe('AB');
+    expect(rhymeKey(51)).toBe('AZ');
+    expect(rhymeKey(52)).toBe('BA');
   });
 
   it('pre-caesural internal rhyme is additive (own letter + type), end rhyme intact', () => {
