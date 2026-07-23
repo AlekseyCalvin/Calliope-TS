@@ -1,12 +1,35 @@
 {
   "name": "calliope-ts",
-  "version": "0.0.7",
-  "description": "A phonological poetry scansion and analysis framework in TypeScript, extrapolating from the works & thought of G. McAleese (2008), M. Wagner (2005), B. Hayes, the makers of Scandroid (2005), and many others. With syntactic dependency parsing and further phrasal NLP via udpipe-node, our js/WASM conversion of UDPipe, plus deep phono/morphological analysis word-by-word using our Nounsing Pro kit.",
+  "version": "0.1.4",
+  "description": "Poetry scansion & analysis suite in TypeScript + MCP server. Phonological, textological, algorithmic scans, CLI & WebApp UIs, English & Russian modes, NLP purviews, prosodic & syntactic maps via our js/wasm UDPipe port, deep phono/morphological word/syllable analysis via our Nounsing-Pro kit, rhyme/homophone search, feature-grounded transforms, remote MCP endpoints (/mcp (streamable http), /sse), & more. Built on foundations laid by McAleese (2008), Wagner (2005), Hayes (1982+), Parrish (2008+), Hartman et al (2005), Fabb & Halle (1967/2008), Heuser et al (2010), Koziev (2025), & many others.",
   "type": "module",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./russian": "./dist/russian/engine.js",
+    "./russian/rewrite": "./dist/russian/rewrite.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "dist/*.d.ts.map",
+    "dist/calliope/",
+    "dist/clio/",
+    "dist/scandroidNative/",
+    "dist/russian/*.js",
+    "dist/russian/*.d.ts",
+    "dist/russian/*.d.ts.map",
+    "README.md",
+    "LICENSE",
+    "webapp/server.mjs",
+    "webapp/public/",
+    "tools/fetch-russian-data.mjs"
+  ],
   "bin": {
     "calliope-ts": "dist/index.js",
-    "calliope-web": "webapp/server.mjs"
+    "calliope-web": "webapp/server.mjs",
+    "calliope-fetch-russian": "tools/fetch-russian-data.mjs"
   },
   "scripts": {
     "build": "tsc",
@@ -14,17 +37,24 @@
     "dev": "ts-node --esm src/index.ts",
     "test": "vitest run",
     "prepublishOnly": "npm run build",
-    "web": "node webapp/server.mjs"
+    "web": "node webapp/server.mjs",
+    "fetch-russian": "node tools/fetch-russian-data.mjs"
   },
   "keywords": [
     "nlp",
     "scansion",
-    "Udpipe",
+    "udpipe",
+    "lyrical",
+    "mcp",
     "meter",
+    "russian",
+    "english",
+    "nounsing",
     "metre",
     "analysis",
     "poetics",
     "verse",
+    "node",
     "poetic",
     "literature",
     "prosody",
@@ -42,19 +72,24 @@
     "ud"
   ],
   "author": "Aleksey Calvin Tsukanov",
-  "license": "apache-2.0",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chalk": "^4.1.2",
     "depedits": "^0.0.1",
+    "en-lexicon": "^1.0.11",
     "en-norm": "0.0.2",
     "en-parse": "^1.1.0",
     "en-pos": "^1.0.13",
     "finnlp": "^1.0.0",
     "lexed": "^1.0.10",
     "nounsing-pro": "0.0.9",
-    "udpipe-node": "0.3.0"
+    "prompts": "^2.4.2",
+    "udpipe-node": "0.3.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
