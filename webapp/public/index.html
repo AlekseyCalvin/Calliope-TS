@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CALLIOPE — Phonological Poetry Scansion</title>
+<meta name="description" content="Calliope TS in the browser: how a poem actually moves — stress, phrasing, meter, rhyme, form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='2,30 16,2 30,30' fill='%23c1272d'/><polygon points='9,30 16,16 23,30' fill='%23ece2c8'/></svg>">
+</head>
+<body>
+
+<!-- shared SVG ornaments -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="orn-corner" viewBox="0 0 64 64">
+      <path d="M4 62 L4 20 Q4 4 20 4 L62 4" fill="none" stroke-width="2.6"/>
+      <path d="M11 62 L11 24 Q11 11 24 11 L62 11" fill="none" stroke-width="1.1"/>
+      <circle cx="18" cy="18" r="3.2" fill="none" stroke-width="1.4"/>
+      <path d="M18 18 q10 -3 12 6 q1.6 7 -6 8" fill="none" stroke-width="1.2"/>
+      <path d="M4 34 l3.5 -4 3.5 4 -3.5 4 z" stroke="none"/>
+      <path d="M34 4 l4 3.5 -4 3.5 -4 -3.5 z" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="mast-wedge" aria-hidden="true"></div>
+  <div class="brand">
+    <span id="brand-sigil" class="brand-sigil sg-vortex" aria-hidden="true"><img id="sigil-img" alt="" src="assets/logos/Logo_Var_2_Tunnel_SVG.svg"></span>
+    <h1 id="brand-word">CALLIOPE</h1>
+    <span class="brand-ts" aria-hidden="true">TS</span>
+    <span class="brand-sub">phonological · scansion · engine</span>
+  </div>
+  <nav class="masthead-tools">
+    <button id="btn-legend" class="ghost-btn">✦ GUIDE</button>
+    <button id="btn-settings" class="ghost-btn" aria-haspopup="true" aria-expanded="false">⚙ SETTINGS</button>
+    <div id="settings-pop" class="settings-pop" hidden>
+      <h3>Settings</h3>
+      <div class="set-block">
+        <span class="set-label">Display</span>
+        <label class="set-radio"><input type="radio" name="display" value="terminal" checked>
+          <b>Terminal</b> — bright inks on black, monospaced; the CLI’s at-a-glance clarity.</label>
+        <label class="set-radio"><input type="radio" name="display" value="manuscript">
+          <b>Manuscript</b> — the parchment &amp; gilt skin.</label>
+      </div>
+      <div class="set-block">
+        <span class="set-label">Prosody engine</span>
+        <label class="set-radio"><input type="radio" name="engine" value="calliope" checked>
+          <b>Calliope</b> — the faithful, current pipeline (default)</label>
+        <label class="set-radio"><input type="radio" name="engine" value="clio">
+          <b>Clio</b> — the frozen legacy parse (FinNLP). Rawer and more idiosyncratic;
+          kept for comparison, occasionally right where Calliope wavers.</label>
+      </div>
+      <p class="set-note" id="engine-note-pop"></p>
+    </div>
+  </nav>
+</header>
+<div class="mast-rule" aria-hidden="true"></div>
+
+<nav class="mode-tabs" role="tablist" aria-label="Instruments">
+  <button class="mode-tab is-active" data-mode="scansion" role="tab" aria-selected="true">Scansion</button>
+  <button class="mode-tab" data-mode="forge" role="tab" aria-selected="false">Rhyme&nbsp;Forge</button>
+  <button class="mode-tab" data-mode="rewrites" role="tab" aria-selected="false">Rewrites</button>
+  <button class="mode-tab" data-mode="syntax" role="tab" aria-selected="false">Syntax</button>
+</nav>
+
+<main class="frame">
+
+<!-- ════════ MODE: SCANSION ════════ -->
+<div id="mode-scansion" class="mode">
+  <span class="bfly b1" aria-hidden="true" style="top:2rem; right:3%;">a</span>
+  <span class="bfly b2" aria-hidden="true" style="bottom:8rem; left:1.5%;">g</span>
+
+  <section id="scriptorium" class="scriptorium panel">
+    <svg class="corner tl"><use href="#orn-corner"/></svg>
+    <svg class="corner tr"><use href="#orn-corner"/></svg>
+    <svg class="corner bl"><use href="#orn-corner"/></svg>
+    <svg class="corner br"><use href="#orn-corner"/></svg>
+    <div class="scriptorium-head">
+      <h2 class="bar-title">The Scriptorium</h2>
+      <p class="whisper">Paste a poem (blank lines separate stanzas) — or a single verse line — and Calliope will show you how it moves: which syllables carry weight, where the beats fall, what rhymes with what.</p>
+    </div>
+    <textarea id="poem-input" spellcheck="false" placeholder="Shall I compare thee to a summer’s day?&#10;Thou art more lovely and more temperate…"></textarea>
+    <div class="scriptorium-foot">
+      <label class="sample-picker">
+        <span>Open a sample:</span>
+        <select id="sample-select">
+          <option value="">— choose —</option>
+        </select>
+      </label>
+      <label class="lang-picker">
+        <span>Language:</span>
+        <select id="lang-select">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+        </select>
+      </label>
+      <button id="btn-analyze" class="analyze-btn">Scan the verse ▶</button>
+    </div>
+  </section>
+
+  <div id="edit-strip" class="edit-strip" hidden>
+    <button id="btn-reopen" class="ghost-btn dark">✎ NEW SCAN</button>
+    <button id="btn-copymap" class="ghost-btn dark" title="copy the whole poem’s stress keys, meters, and rhyme letters as plain text">⧉ COPY STRESS MAP</button>
+    <div class="view-toggles">
+      <label class="toggle-label">Tint
+        <select id="tint-select">
+          <option value="rel">relative stress</option>
+          <option value="lex">lexical stress</option>
+          <option value="class">word class</option>
+          <option value="off">plain ink</option>
+        </select>
+      </label>
+      <label class="check-label"><input type="checkbox" id="feet-toggle"> show feet &amp; caesurae</label>
+      <span id="engine-note" class="whisper dark"></span>
+    </div>
+  </div>
+
+  <div class="stage-and-rail" id="results-zone" hidden>
+    <section id="codex" class="codex panel" aria-label="Analyzed poem"></section>
+    <aside class="rail">
+      <section id="synopsis-card" class="rail-card panel"></section>
+      <section id="phonopoetics-card" class="rail-card panel"></section>
+      <section id="inspector-card" class="rail-card panel inspector">
+        <h3 class="rail-title">Word Profile</h3>
+        <p class="whisper" id="inspector-hint">Hover over any word for detailed info; click a word to latch its full profile — with its Nounsing&nbsp;Pro record — to this board. Click a line’s meter tag for its detailed scan.</p>
+        <div id="inspector-body"></div>
+      </section>
+    </aside>
+  </div>
+
+  <div id="empty-hint" class="empty-hint">
+    <div class="manifesto">
+      <span class="mani-bar">READ WITH THE EAR</span>
+      <span class="mani-wedge" aria-hidden="true"></span>
+      <p>“<em>meter is something you recover from pronunciation,<br>not something you stamp onto spelling.</em>”</p>
+      <p class="whisper dark">Calliope reads a line the way an attentive reader does — working out how the words would be said aloud, and only then listening for the beat that saying settles into.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MODE: RHYME FORGE ════════ -->
+<div id="mode-forge" class="mode" hidden>
+  <span class="bfly b1" aria-hidden="true" style="top:3rem; left:4%;">k</span>
+  <span class="bfly b2" aria-hidden="true" style="top:16rem; right:4%;">p</span>
+  <section class="panel tool-panel">
+    <svg class="corner tl"><use href="#orn-corner"/></svg>
+    <svg class="corner tr"><use href="#orn-corner"/></svg>
+    <svg class="corner bl"><use href="#orn-corner"/></svg>
+    <svg class="corner br"><use href="#orn-corner"/></svg>
+    <h2 class="bar-title">The Rhyme Forge</h2>
+    <p class="whisper">Interrogate a single word’s sound-anatomy from the Nounsing&nbsp;Pro augmented lexicon — its rhymes (strict, or trimmed to a syllable count), its rime phonemes, its own metrical foot — or cast a stress pattern and see which words fit it.</p>
+
+    <div class="forge-controls">
+      <label class="tool-field">
+        <span>Word</span>
+        <input id="forge-word" type="text" spellcheck="false" placeholder="symmetry">
+      </label>
+      <label class="tool-field">
+        <span>Rhymes with exactly</span>
+        <select id="forge-syll">
+          <option value="">any syllable count</option>
+          <option value="1">1 syllable</option><option value="2">2 syllables</option>
+          <option value="3">3 syllables</option><option value="4">4 syllables</option>
+          <option value="5">5 syllables</option>
+        </select>
+      </label>
+      <button id="forge-go" class="analyze-btn small">Forge ▶</button>
+    </div>
+    <div id="forge-out" class="tool-out"></div>
+
+    <h3 class="bar-title small" style="margin-top:1.6rem">Meter Match</h3>
+    <p class="whisper">Cast a stress contour in digits — <span class="mono-inline">1</span> primary, <span class="mono-inline">2</span> secondary, <span class="mono-inline">0</span> unstressed. <span class="mono-inline">010</span> summons amphibrachs, <span class="mono-inline">100</span> dactyls, <span class="mono-inline">01</span> iambs.</p>
+    <div class="forge-controls">
+      <label class="tool-field">
+        <span>Pattern</span>
+        <input id="meter-pattern" type="text" spellcheck="false" placeholder="010" maxlength="8">
+      </label>
+      <button id="meter-go" class="analyze-btn small">Summon ▶</button>
+    </div>
+    <div id="meter-out" class="tool-out"></div>
+  </section>
+</div>
+
+<!-- ════════ MODE: REWRITES ════════ -->
+<div id="mode-rewrites" class="mode" hidden>
+  <span class="bfly b1" aria-hidden="true" style="top:2.5rem; right:6%;">c</span>
+  <span class="bfly b2" aria-hidden="true" style="top:18rem; left:3%;">w</span>
+  <section class="panel tool-panel">
+    <svg class="corner tl"><use href="#orn-corner"/></svg>
+    <svg class="corner tr"><use href="#orn-corner"/></svg>
+    <svg class="corner bl"><use href="#orn-corner"/></svg>
+    <svg class="corner br"><use href="#orn-corner"/></svg>
+    <h2 class="bar-title">The Transmutation Chamber</h2>
+    <p class="whisper">Rewrite engines replace every word with a lexicon-mate — sharing its opening phonemes, its exact stress skeleton, or its rhyme — while filters keep the grammar and register from drifting. English casts draw on Nounsing&nbsp;Pro’s Zipf-graded lexicon; Cyrillic verse transmutes through the Russian stress dictionary, a poetry-corpus frequency table standing in for Zipf, with UPOS tags guarding the grammar. Morphemic grounding and register fidelity bind casts closer still to the source’s derivational shape and diction. Each cast rolls fresh dice.</p>
+
+    <textarea id="rw-input" spellcheck="false" placeholder="Tyger Tyger, burning bright,&#10;In the forests of the night;&#10;&#10;Белеет парус одинокой&#10;В тумане моря голубом!.."></textarea>
+
+    <div class="rw-controls">
+      <label class="tool-field">
+        <span>Method</span>
+        <select id="rw-mode">
+          <option value="stress">stress skeleton — keep the meter, transform the sense</option>
+          <option value="phones">phoneme echo — words sharing the first two phones</option>
+          <option value="rhyme">rhyme swap — each word becomes a rhyme of itself</option>
+        </select>
+      </label>
+      <label class="tool-field slider">
+        <span>Part-of-speech fidelity <b id="rw-pos-val">1</b></span>
+        <input id="rw-pos" type="range" min="0" max="3" step="1" value="1">
+        <span class="slider-hints"><i>loose</i><i>exact tag</i></span>
+      </label>
+      <label class="tool-field slider">
+        <span>Zipf frequency floor <b id="rw-freq-val">2.0</b></span>
+        <input id="rw-freq" type="range" min="0" max="4" step="0.25" value="2">
+        <span class="slider-hints"><i>any word</i><i>common only</i></span>
+      </label>
+      <label class="tool-field slider" title="Prefer replacements whose Zipf frequency sits NEAR the source word's — a rare word swaps for a similarly rare word, a common one for a common one. Grounds diction and register. (English casts only.)">
+        <span>Register fidelity <b id="rw-reg-val">0</b></span>
+        <input id="rw-reg" type="range" min="0" max="4" step="1" value="0">
+        <span class="slider-hints"><i>off</i><i>same register</i></span>
+      </label>
+      <label class="tool-field rw-fuzzy-field" title="Prefer replacements sharing the source word's derivational morphology — its suffix (-ness, -tion, -ful…) and the lexicon's morphological classes — and avoid same-root casts. (English casts only.)">
+        <span>Morphemic grounding</span>
+        <input id="rw-morph" type="checkbox">
+      </label>
+      <label class="tool-field rw-fuzzy-field" title="By default English source words are tagged IN LINE CONTEXT by the scansion engine's parser ('frame' in 'Could frame thy fearful symmetry' gates as a verb, not the dictionary's noun). Tick to revert to dictionary tags — faster, context-blind. (English casts only.)">
+        <span>Dictionary tags</span>
+        <input id="rw-dictpos" type="checkbox">
+      </label>
+      <label class="tool-field rw-fuzzy-field" id="rw-fuzzy-field" hidden title="Widen rhyme swaps beyond perfect rhymes for words with few or no perfect rhyme-mates — family and assonant tiers in English, неточная рифма (same tail length and stressed vowel) in Russian. Perfect rhymes still win when they exist.">
+        <span>Fuzzy rhymes</span>
+        <input id="rw-fuzzy" type="checkbox">
+      </label>
+      <button id="rw-go" class="analyze-btn small">Transmute ▶</button>
+    </div>
+    <div id="rw-out" class="tool-out rw-out"></div>
+  </section>
+</div>
+
+<!-- ════════ MODE: SYNTAX ════════ -->
+<div id="mode-syntax" class="mode" hidden>
+  <span class="bfly b1" aria-hidden="true" style="top:4rem; left:5%;">e</span>
+  <span class="bfly b2" aria-hidden="true" style="top:14rem; right:5%;">r</span>
+  <section class="panel tool-panel">
+    <svg class="corner tl"><use href="#orn-corner"/></svg>
+    <svg class="corner tr"><use href="#orn-corner"/></svg>
+    <svg class="corner bl"><use href="#orn-corner"/></svg>
+    <svg class="corner br"><use href="#orn-corner"/></svg>
+    <h2 class="bar-title">The Parse Observatory</h2>
+    <p class="whisper">UDPipe’s neural dependency parse, line by line — every word’s part of speech, morphological features, and grammatical bond, with the tag-repair and tree-repair (DepEdit-TS) corrections already applied.</p>
+    <textarea id="syn-input" spellcheck="false" placeholder="Tell all the truth but tell it slant —"></textarea>
+    <div class="forge-controls">
+      <button id="syn-go" class="analyze-btn small">Parse ▶</button>
+      <label class="check-label on-parch"><input type="checkbox" id="syn-fuse">
+        <span class="cl-title">fuse lines</span><span class="cl-desc"> — parse as one continuous text (ignores line breaks)</span></label>
+    </div>
+    <div id="syn-out" class="tool-out"></div>
+  </section>
+</div>
+
+</main>
+
+<footer class="colophon">
+  <div class="colo-left">
+    <span class="colo-title">CALLIOPE&nbsp;TS · Aleksey Calvin / <a href="https://www.SilverAgePoets.com" target="_blank" rel="noopener">SilverAgePoets.com</a></span>
+    <span class="colo-fine">Key sources: McAleese (2008), Wagner (2005), Hayes (1982/1996), Kaun &amp; Hayes (2005), Hartman (2005), &amp; others (<a href="https://github.com/AlekseyCalvin/Calliope-TS/blob/main/README.md" target="_blank" rel="noopener">see README</a>).</span>
+    <span class="colo-fine">Syntactic parsing via <a href="https://www.npmjs.com/package/udpipe-node" target="_blank" rel="noopener">UDPipe-Node</a> | parse corrections via <a href="https://www.npmjs.com/package/depedits" target="_blank" rel="noopener">DepEdit-TS</a> | morphological/phonemic/phonic analyses via <a href="https://www.npmjs.com/package/nounsing-pro" target="_blank" rel="noopener">Nounsing&nbsp;Pro</a></span>
+  </div>
+  <div class="colo-links">
+    <a href="https://github.com/AlekseyCalvin/Calliope-TS" target="_blank" rel="noopener" title="Calliope-TS on GitHub"><img src="assets/GithubLogo.png" alt="GitHub"></a>
+    <a href="https://www.npmjs.com/package/calliope-ts" target="_blank" rel="noopener" title="calliope-ts on NPM"><img src="assets/NPM2.png" alt="NPM"></a>
+  </div>
+</footer>
+
+<div id="tooltip" class="tooltip" hidden></div>
+
+<div id="veil" class="veil" hidden>
+  <div class="veil-inner">
+    <div class="veil-apparatus" aria-hidden="true">
+      <div class="veil-burst"></div>
+      <div class="veil-ring"></div>
+      <div class="veil-glyph">▲</div>
+    </div>
+    <p id="veil-text">Sounding the syllables…</p>
+  </div>
+</div>
+
+<div id="legend" class="legend-overlay" hidden>
+  <div class="legend-panel panel" role="dialog" aria-modal="true" aria-label="Legend">
+    <svg class="corner tl"><use href="#orn-corner"/></svg>
+    <svg class="corner tr"><use href="#orn-corner"/></svg>
+    <svg class="corner bl"><use href="#orn-corner"/></svg>
+    <svg class="corner br"><use href="#orn-corner"/></svg>
+    <div class="legend-head">
+      <h2 class="bar-title">✦ Guide</h2>
+      <button id="btn-legend-close" class="ghost-btn">esc · close</button>
+    </div>
+    <div id="legend-body" class="legend-body"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<div id="file-warning" class="file-warning" hidden>
+  <b>This page is being read straight from disk (file://)</b> — the analysis engine isn’t running behind it,
+  so nothing can be scanned. Start the engine from the project folder with
+  <code>npm run web</code>, then open <a href="http://localhost:4321">http://localhost:4321</a>.
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
