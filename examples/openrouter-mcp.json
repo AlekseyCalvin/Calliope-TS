@@ -1,0 +1,54 @@
+{
+  "comment": "OpenRouter MCP example — how to use Calliope TS as a tool for stateful agents via OpenRouter API",
+  "docs": "https://openrouter.ai/docs/features/mcp",
+  "space_url": "https://AlekseyCalvin-cts.hf.space/mcp",
+  "local_url": "http://localhost:7860/mcp",
+  "example_request": {
+    "model": "anthropic/claude-3.5-sonnet",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Scan this poem and tell me its meter and rhyme scheme: Shall I compare thee to a summer's day? Thou art more lovely and more temperate."
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "scan_poem",
+          "description": "Full scansion of poem / verse",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "text": { "type": "string" },
+              "detail_level": { "type": "string", "enum": ["summary", "full"] }
+            },
+            "required": ["text"]
+          }
+        }
+      }
+    ],
+    "mcpServers": [
+      {
+        "name": "calliope-ts",
+        "url": "https://AlekseyCalvin-cts.hf.space/mcp"
+      }
+    ]
+  },
+  "curl_test_scan_poem": "curl -X POST http://localhost:7860/mcp -H 'Content-Type: application/json' -H 'Accept: application/json, text/event-stream' -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"scan_poem\",\"arguments\":{\"text\":\"Shall I compare thee to a summer'\\''s day?\\nThou art more lovely and more temperate\",\"detail_level\":\"summary\"}}}'",
+  "claude_desktop_config": {
+    "mcpServers": {
+      "calliope-ts": {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://AlekseyCalvin-cts.hf.space/sse"]
+      }
+    }
+  },
+  "cursor_config": {
+    "mcpServers": {
+      "calliope-ts": {
+        "url": "https://AlekseyCalvin-cts.hf.space/mcp"
+      }
+    }
+  }
+}
